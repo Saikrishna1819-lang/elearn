@@ -22,11 +22,18 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Scrollbar Styling */
@@ -63,7 +70,8 @@ body {
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--glass-border);
-  padding: 15px 0;
+  padding: 10px 0;
+  /* Reduced vertical padding */
 }
 
 .nav-container {
@@ -78,8 +86,10 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
+  gap: 8px;
+  /* Tighter logo gap */
+  font-size: 1.4rem;
+  /* Slightly smaller logo text */
   font-weight: 800;
   background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
   -webkit-background-clip: text;
@@ -96,7 +106,8 @@ body {
 /* NAV LINKS */
 .nav-center {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  /* Slightly reduced gap */
   align-items: center;
 }
 
@@ -365,10 +376,13 @@ body {
 
 /* INFO SECTIONS */
 .info-section {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 24px;
+  max-width: 700px;
+  /* Reduced from 800px */
+  margin: 40px auto;
+  /* Reduced margin */
+  padding: 30px;
+  /* Reduced from 40px */
+  border-radius: 20px;
   background: var(--secondary-bg);
   border: 1px solid var(--glass-border);
 }
@@ -381,10 +395,13 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #020617;
-  padding: 60px 20px;
-  margin-top: 100px;
+  background: rgba(2, 6, 23, 0.5);
+  /* Semi-transparent dark blue */
+  backdrop-filter: blur(10px);
+  padding: 20px 20px;
+  /* Reduced padding */
   border-top: 1px solid var(--glass-border);
+  flex-shrink: 0;
 }
 
 .footer-inner {
