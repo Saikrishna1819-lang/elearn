@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<div class="container" id="courseDetails"></div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <h3>EduLearn</h3>
+    <p>
+      EduLearn is an online learning platform helping students gain
+      real-world skills through structured courses and expert-led content.
+    </p>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
