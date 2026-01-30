@@ -48,76 +48,76 @@ function logout() {
 // ================= COURSES =================
 const courses = [
   {
-  id: 1,
-  title: "JavaScript Basics",
-  description: "Learn JS",
-  duration: "6 Weeks",
-  price: 999,
-  image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
-  video: "https://www.youtube.com/embed/PkZNo7MFNFg"
-},
-{
-  id: 2,
-  title: "HTML & CSS",
-  description: "Build websites",
-  duration: "4 Weeks",
-  price: 699,
-  image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19",
-  video: "https://www.youtube.com/embed/mU6anWqZJcc"
-},
-{
-  id: 3,
-  title: "Python",
-  description: "Learn Python",
-  duration: "6 Weeks",
-  price: 899,
-  image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-  video: "https://www.youtube.com/embed/_uQrJ0TkZlc"
-},
-{
-  id: 4,
-  title: "React",
-  description: "Frontend framework",
-  duration: "6 Weeks",
-  price: 1499,
-  image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
-  video: "https://www.youtube.com/embed/bMknfKXIFA8"
-},
-{
-  id: 5,
-  title: "DSA",
-  description: "Interview prep",
-  duration: "10 Weeks",
-  price: 1999,
-  image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d",
-  video: "https://www.youtube.com/embed/8hly31xKli0"
-},
-{
-  id: 6,
-  title: "SQL",
-  description: "Databases",
-  duration: "5 Weeks",
-  price: 799,
-  image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d",
-  video: "https://www.youtube.com/embed/HXV3zeQKqGY"
-}
-,
+    id: 1,
+    title: "JavaScript Basics",
+    description: "Learn JS",
+    duration: "6 Weeks",
+    price: 999,
+    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+    video: "https://www.youtube.com/embed/PkZNo7MFNFg"
+  },
   {
-  id: 7,
-  title: "Node.js Basics",
-  description: "Backend development with Node.js",
-  duration: "6 Weeks",
-  price: 1299,
-  video: "https://www.youtube.com/embed/TlB_eWDSMt4"
-},
-{
-  id: 8,
-  title: "MongoDB Essentials",
-  description: "Learn NoSQL database with MongoDB",
-  duration: "4 Weeks",
-  price: 999,
-  video: "https://www.youtube.com/embed/ofme2o29ngU"
-}
+    id: 2,
+    title: "HTML & CSS",
+    description: "Build websites",
+    duration: "4 Weeks",
+    price: 699,
+    image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19",
+    video: "https://www.youtube.com/embed/mU6anWqZJcc"
+  },
+  {
+    id: 3,
+    title: "Python",
+    description: "Learn Python",
+    duration: "6 Weeks",
+    price: 899,
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    video: "https://www.youtube.com/embed/_uQrJ0TkZlc"
+  },
+  {
+    id: 4,
+    title: "React",
+    description: "Frontend framework",
+    duration: "6 Weeks",
+    price: 1499,
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    video: "https://www.youtube.com/embed/bMknfKXIFA8"
+  },
+  {
+    id: 5,
+    title: "DSA",
+    description: "Interview prep",
+    duration: "10 Weeks",
+    price: 1999,
+    image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d",
+    video: "https://www.youtube.com/embed/8hly31xKli0"
+  },
+  {
+    id: 6,
+    title: "SQL",
+    description: "Databases",
+    duration: "5 Weeks",
+    price: 799,
+    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d",
+    video: "https://www.youtube.com/embed/HXV3zeQKqGY"
+  }
+  ,
+  {
+    id: 7,
+    title: "Node.js Basics",
+    description: "Backend development with Node.js",
+    duration: "6 Weeks",
+    price: 1299,
+    video: "https://www.youtube.com/embed/TlB_eWDSMt4"
+  },
+  {
+    id: 8,
+    title: "MongoDB Essentials",
+    description: "Learn NoSQL database with MongoDB",
+    duration: "4 Weeks",
+    price: 999,
+    video: "https://www.youtube.com/embed/ofme2o29ngU"
+  }
 ];
 
 function loadCourses() {
@@ -266,9 +266,6 @@ function showContact() {
 }
 
 
-
-
-
 function showCourses() {
   hideAllSections();
 }
@@ -279,4 +276,3 @@ function showCourses() {
 loadCourses();
 loadCourseDetails();
 loadDashboard();
-

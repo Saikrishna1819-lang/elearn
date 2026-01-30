@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EduLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+        if (!localStorage.getItem("loggedInUser")) {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">EduLearn</span>
+            </a>
+
+            <nav class="nav-center">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Courses ▾</span>
+                    <div class="dropdown-menu">
+                        <a href="home.html">All Courses</a>
+                        <a href="dashboard.html">My Courses</a>
+                    </div>
+                </div>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-cta">
+                <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="info-section" style="display: block; margin-top: 20px;">
+            <h2>Get in Touch</h2>
+            <p>Have questions about a course? Need technical support? Or just want to say hi? We'd love to hear from
+                you!</p>
+
+            <div
+                style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="glass" style="padding: 25px; border-radius: 20px; text-align: center;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 10px;">Email Us</h3>
+                    <p style="color: var(--text-primary);">support@edulearn.com</p>
+                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">Response time: Within
+                        24 hours</p>
+                </div>
+
+                <div class="glass" style="padding: 25px; border-radius: 20px; text-align: center;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 10px;">Call Us</h3>
+                    <p style="color: var(--text-primary);">+91 9876543210</p>
+                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">Mon-Fri, 9am - 6pm IST
+                    </p>
+                </div>
+
+                <div class="glass" style="padding: 25px; border-radius: 20px; text-align: center;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 10px;">Visit Us</h3>
+                    <p style="color: var(--text-primary);">EduLearn Hub, KPHB Colony</p>
+                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">Hyderabad, Telangana,
+                        India</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; text-align: center;">
+                <p style="color: var(--text-secondary);">Looking for something else?</p>
+                <a href="index.html" class="btn btn-primary" style="margin-top: 15px;">Browse All Courses</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <h3>EduLearn</h3>
+            <p>
+                Empowering the next generation of creators and engineers through high-quality,
+                accessible education.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | EduLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+        if (!localStorage.getItem("loggedInUser")) {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">EduLearn</span>
+            </a>
+
+            <nav class="nav-center">
+                <a href="home.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Courses ▾</span>
+                    <div class="dropdown-menu">
+                        <a href="home.html">All Courses</a>
+                        <a href="dashboard.html">My Courses</a>
+                    </div>
+                </div>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-cta">
+                <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="info-section" style="display: block; margin-top: 20px;">
+            <h2>About EduLearn</h2>
+            <p>
+                EduLearn is an online e-learning platform designed to help students
+                and professionals gain practical, job-ready skills through
+                structured courses and expert-led video tutorials.
+            </p>
+
+            <p style="margin-top: 20px;">
+                Our platform focuses on hands-on learning, real-world examples,
+                and continuous progress tracking to ensure effective learning. We believe that education should be
+                accessible, affordable, and practical for everyone, regardless of their background or current skill
+                level.
+            </p>
+
+            <h3 style="margin-top: 30px; color: var(--accent-primary);">Our Core Values</h3>
+            <ul style="margin-top: 15px; list-style-position: inside; color: var(--text-secondary);">
+                <li><strong>Beginner to Advanced:</strong> We cover the entire spectrum of learning.</li>
+                <li><strong>Self-Paced:</strong> Learn when you want, where you want.</li>
+                <li><strong>Industry-Relevant:</strong> Skills that actually help you get hired.</li>
+                <li><strong>Community Focused:</strong> Join thousands of other learners on their journey.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <h3>EduLearn</h3>
+            <p>
+                Empowering the next generation of creators and engineers through high-quality,
+                accessible education.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

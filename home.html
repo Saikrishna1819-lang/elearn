@@ -1,107 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Courses</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLearn | Premium Courses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<script>
-  if (!localStorage.getItem("loggedInUser")) {
-    window.location.href = "index.html";
-  }
-</script>
+  <script>
+    if (!localStorage.getItem("loggedInUser")) {
+      window.location.href = "index.html";
+    }
+  </script>
 
-<header class="main-header">
-  <div class="nav-container">
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">EduLearn</span>
+      </a>
 
-    <!-- LOGO -->
-    <div class="logo">
-      <span class="logo-icon">🎓</span>
-      <span class="logo-text">EduLearn</span>
-    </div>
-
-    <!-- NAV LINKS -->
-    <!-- NAV LINKS -->
-    <div class="nav-center">
-        <a href="home.html" onclick="showCourses()">Home</a>
-        <a href="#" onclick="showAbout()">About</a>
-        <a href="home.html">Courses</a>
+      <nav class="nav-center">
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <span class="dropdown-trigger">Courses ▾</span>
+          <div class="dropdown-menu">
+            <a href="home.html">All Courses</a>
+            <a href="dashboard.html">My Courses</a>
+          </div>
+        </div>
         <a href="dashboard.html">Dashboard</a>
-        <a href="#" onclick="showContact()">Contact</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;" onclick="logout()">Logout</button>
+      </div>
     </div>
+  </header>
 
-    <!-- CTA BUTTON -->
-    <div class="nav-cta">
-      <button onclick="logout()">Logout</button>
+  <main>
+    <section class="hero">
+      <h1>Master Your Future</h1>
+      <p>Premium, high-quality courses designed to help you land your dream job in tech. Learn at your own pace from
+        industry experts.</p>
+    </section>
+
+    <div class="container" id="mainContainer">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="What do you want to learn today?" onkeyup="searchCourses()">
+      </div>
+
+      <div class="course-wrapper" id="courseList"></div>
     </div>
+  </main>
 
-  </div>
-</header>
+  <footer class="footer">
+    <div class="footer-inner">
+      <h3>EduLearn</h3>
+      <p>
+        Empowering the next generation of creators and engineers through high-quality,
+        accessible education.
+      </p>
+    </div>
+  </footer>
 
-
-<!-- ABOUT SECTION -->
-<section id="aboutSection" class="info-section">
-  <h2>About EduLearn</h2>
-  <p>
-    EduLearn is an online e-learning platform designed to help students
-    and professionals gain practical, job-ready skills through
-    structured courses and expert-led video tutorials.
-  </p>
-
-  <p>
-    Our platform focuses on hands-on learning, real-world examples,
-    and continuous progress tracking to ensure effective learning.
-  </p>
-
-  <ul>
-    <li>Beginner to Advanced Courses</li>
-    <li>Learn at Your Own Pace</li>
-    <li>Industry-Relevant Skills</li>
-    <li>Affordable & Accessible Education</li>
-  </ul>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contactSection" class="info-section">
-  <h2>Contact Us</h2>
-
-  <p><strong>Email:</strong> support@edulearn.com</p>
-  <p><strong>Phone:</strong> +91 9876543210</p>
-  <p><strong>Address:</strong> EduLearn , Kphb Colony ,Hyderabad</p>
-
-  <p>
-    Have questions or feedback?  
-    Reach out to us — we’re happy to help!
-  </p>
-</section>
-
-
-
-<div class="container">
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search courses" onkeyup="searchCourses()">
-  </div>
-
-  <div class="course-wrapper" id="courseList"></div>
-</div>
-
-
-<footer class="footer">
-  <div class="footer-inner">
-    <h3>EduLearn</h3>
-    <p>
-      EduLearn is an online learning platform helping students gain
-      real-world skills through structured courses and expert-led content.
-    </p>
-   
-  </div>
-</footer>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
